@@ -1,0 +1,20 @@
+	switch(e.getKeyChar()) {
+		case 'w':
+			headY -= 1;
+			if(headY == -1) headY += (500 / pixel);
+			snakeHead.setLocation(headX * pixel, headY * pixel );
+			break;
+		case 'a':
+			headX -= 1;
+			if(headX == -1) headX += (500 / pixel);
+			snakeHead.setLocation(headX * pixel, headY* pixel);
+			break;
+		case 's':
+			headY = (headY+1) % (500 / pixel);
+			snakeHead.setLocation(headX* pixel , headY* pixel );
+			break;
+		case 'd':
+			headX = (headX + 1) % (500 / pixel);
+			snakeHead.setLocation(headX* pixel, headY* pixel);
+			break;
+		}
